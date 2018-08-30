@@ -1,4 +1,5 @@
-// import Vue from 'vue'
-// import iView from 'iview'
+import Vue from 'vue'
+import iView from 'iview'
 
-// Vue.use(iView)
+Vue.use(iView)
+import 'iview/dist/styles/iview.css'

@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'textnuxt',
+    title: 'mockServer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +24,9 @@ module.exports = {
   /*
   ** plugins
    */
-  // plugins:['~/plugins/iView'],
+  plugins:[
+       {src: '~plugins/iview', ssr: true}   
+    ],
   /*
    ** Build configuration
    */
