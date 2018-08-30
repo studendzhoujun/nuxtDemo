@@ -65,11 +65,30 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+module.exports = require("koa-router");
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+module.exports = require("superagent");
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 module.exports = {
@@ -89,6 +108,10 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#909' },
+  /*
+  ** plugins
+   */
+  // plugins:['~/plugins/iView'],
   /*
    ** Build configuration
    */
@@ -110,58 +133,93 @@ module.exports = {
 };
 
 /***/ },
-/* 1 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(6);
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_superagent__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_superagent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_superagent__);
 
 
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
+var _this = this;
 
-module.exports = require("koa");
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
 
-module.exports = require("koa-router");
 
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
+var router = new __WEBPACK_IMPORTED_MODULE_1_koa_router___default.a();
 
-module.exports = require("nuxt");
+/* harmony default export */ exports["a"] = function (app) {
+    router.get('/about/s', function () {
+        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                    switch (_context.prev = _context.next) {
+                        case 0:
+                            ctx.body = __webpack_require__(7);
+
+                        case 1:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, _this);
+        }));
+
+        return function (_x, _x2) {
+            return _ref.apply(this, arguments);
+        };
+    }());
+    // 添加路由中间件
+    // 对请求进行一些限制处理
+    app.use(router.routes()).use(router.allowedMethods());
+};
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
-module.exports = require("superagent");
+module.exports = require("koa");
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-module.exports = require("regenerator-runtime");
+module.exports = require("nuxt");
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+module.exports = {"code":200,"message":"this is ok"}
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+module.exports = require("regenerator-runtime");
+
+/***/ },
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_router__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_router__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_superagent__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_superagent__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_superagent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_superagent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_nuxt__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_nuxt__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_nuxt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_nuxt__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__router_js__ = __webpack_require__(4);
 
 
 var start = function () {
@@ -179,7 +237,7 @@ var start = function () {
 
             // Import and Set Nuxt.js options
 
-            config = __webpack_require__(0);
+            config = __webpack_require__(3);
 
             config.dev = !(app.env === 'production');
 
@@ -198,6 +256,8 @@ var start = function () {
             return builder.build();
 
           case 10:
+
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__router_js__["a" /* default */])(app);
             //
             router.get('/getMove', function () {
               var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_zhoujun_work_1808_testnuxt_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
@@ -252,7 +312,7 @@ var start = function () {
             app.listen(port, host);
             console.log('Server listening on ' + host + ':' + port); // eslint-disable-line no-console
 
-          case 15:
+          case 16:
           case 'end':
             return _context2.stop();
         }
@@ -266,6 +326,7 @@ var start = function () {
 }();
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 
 
 

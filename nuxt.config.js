@@ -22,6 +22,10 @@ module.exports = {
   */
   loading: { color: '#909' },
   /*
+  ** plugins
+   */
+  // plugins:['~/plugins/iView'],
+  /*
    ** Build configuration
    */
   build: {

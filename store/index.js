@@ -1,6 +1,7 @@
 import Vuex from 'vuex'
 
 import mutations from './mutations'
+import axios from '../utils/fetch.js'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -8,7 +9,16 @@ const createStore = () => {
       counter: 0,
       name:'zhou'
     },
-    mutations
+    mutations,
+    actions:{
+      async goAbout({commit}){
+        return axios.get('about/s')
+        .then((res) => {
+          console.log(res)
+           commit('changeName',res.data.message)
+        })
+      }
+    }
   })
 }
 

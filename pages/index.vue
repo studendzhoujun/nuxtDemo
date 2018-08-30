@@ -24,7 +24,8 @@
       ]),
       methods:{
         add(){
-          this.$store.commit('increment')
+          // this.$store.commit('increment')
+          this.$store.dispatch('goAbout')
         }
       }
     }

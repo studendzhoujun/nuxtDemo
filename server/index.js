@@ -2,6 +2,7 @@ import Koa from 'koa'
 import koaRouter from 'koa-router'
 import request from 'superagent'
 import { Nuxt, Builder } from 'nuxt'
+import routers from './router.js'
 const router = koaRouter()
 
 async function start () {
@@ -21,6 +22,8 @@ async function start () {
     const builder = new Builder(nuxt)
     await builder.build()
   }
+
+  routers(app)
   //
   router.get('/getMove', async (ctx, next) => {
     let {id} = ctx.request.query
