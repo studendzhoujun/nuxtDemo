@@ -14,12 +14,15 @@
   "dependencies": {
     "axios": "^0.18.0",
     "cross-env": "^5.0.1",
+    "echarts": "^4.1.0",
     "iview": "2.0.0",
     "koa": "^2.4.1",
     "koa-router": "^7.4.0",
     "nuxt": "1.0.0",
     "source-map-support": "^0.4.15",
-    "superagent": "^3.8.3"
+    "superagent": "^3.8.3",
+    "v-charts": "^1.17.10",
+    "vue-schart": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

@@ -25,7 +25,8 @@ module.exports = {
   ** plugins
    */
   plugins:[
-       {src: '~plugins/iview', ssr: true}   
+       {src: '~plugins/iview', ssr: true},
+       {src: '~plugins/schart', ssr: false}
     ],
   /*
    ** Build configuration
